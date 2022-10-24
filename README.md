@@ -4,5 +4,4 @@
 ![MyCalculator](https://user-images.githubusercontent.com/96730744/197638419-24e94850-41a7-46f9-bd4c-c23a7d48ad52.png)
 
 # Иллюстарации работы с калькулятором
-![Uploading bandicam 2022-10-25 01-14-01-821 (1).gif…]
-
+![GifRes](https://user-images.githubusercontent.com/96730744/197640702-ca911174-4dd6-4d31-bab0-1694fa052aef.gif)
