@@ -6,41 +6,23 @@
 # Oписанием проекта
 Проект содержит в себе следующие классы:
 + `Calculations.cs` в котором реализованны следующие методы:
-    + `ProcessStatement` который отвечает за преобразование поступающей в нее строки:
-```
-try
-{
-   string result = CalulateStatement(GetOperantA(sign, statement), GetOperantB(statement), GetOperation(statement));
-   if(statement.Length > 9)
-   {
-      return "EXCEEDED";
-   }
-   else
-   {
-      return result;
-   }
-}
-catch(Exception)
-{
-  return "0";
-}
-
-```
-
-    + `GetOperantA` который отвечает за обработку первого операнда:
-    
-```
-string[] a = statement.Split('+', '-', '/', '*');
-            return sign + a[0];
-```
-    + `CalulateStatement`;
-    
-+ `Calculator.cs` который предназначен для работы с Windows Forms и содержащий следующие методы:
-    + OperandChange;
-    + 
-    
-    
-
+    + `ProcessStatement` который отвечает за преобразование поступающей в нее строки;
+    + `GetOperantA` который отвечает за обработку первого операнда;
+    + `GetOperantB` который отвечает за обработку второго операнда;
+    + `GetOperation` который отвечает за обработку знака операции;
+    + `CalulateStatement` отвечающий за выявления знака операции и в зависимости от знака вызывает один из следующих методов:
+        + `Sum` (метод сложения);
+        + `Multiply` (метод умножения);
+        + `Subtraction` (метод вычитания);
+        + `Divide` (метод деления);
++ `Form1.cs` который предназначен для работы с Windows Forms и содержащий следующие методы:
+    + `OperandChange` (Вывод чисел в текстовое поле);
+    + `OperationCnange` (Вывод знака операции в текстовое поле);
+    + `SignChange` (Вывод знака числа в текстовое поле знака);
+    + `ClearDisplay` (Отчистка текстового поля);
+    + `Equally` (Вывод результата в тектовое поле);
+    + `buttonOne_Click` и ему подобные (Обработчики события нажатия на кнопку с числом);
+    + `buttonDivide_Click` и ему подобные (Обработчики события нажатия на кнопку со знаком);
 + `CalculationsTests.cs` в котором содержатся методы для тестирования программы.
 
 # Инструкция по запуску проекта
