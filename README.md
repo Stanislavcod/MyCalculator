@@ -1,9 +1,11 @@
-# MyCalculator 
+# Описание проекта __MyCalculator__
 Приложение __MyCalculator__, написанное на языке с# с использованием Windows Forms, предоставляет стандартные функции калькулятора, такие как сложение, деление, умножение и вычитание.
+
+Приложение написано на основе [технического задания](https://drive.google.com/file/d/1pG7LePLCTgWDAHcDCO2xN_1V6AvABwZw/view).
 
 ![MyCalculator](https://user-images.githubusercontent.com/96730744/197638419-24e94850-41a7-46f9-bd4c-c23a7d48ad52.png)
 
-# Oписанием проекта
+# Oписание классов и методов
 Проект содержит в себе следующие классы:
 + `Calculations.cs` в котором реализованны следующие методы:
     + `ProcessStatement` который отвечает за преобразование поступающей в нее строки;
@@ -51,21 +53,21 @@
 ## Пример методов тестирования
 ```
 [Fact]
-        public void TestSubtractResultFife()
-        {
-            Calculations calculation = new();
-            string result = calculation.ProcessStatement("", "3+2");
-            Assert.Equal("5", result);
-        }
-        [Fact]
-        public void TestSubtractResultMinusOne()
-        {
-            Calculations calculation = new();
-            string result = calculation.ProcessStatement("-", "3+2");
-            Assert.Equal("-1", result);
-        }
+public void TestSubtractResultFife()
+{
+   Calculations calculation = new();
+   string result = calculation.ProcessStatement("", "3+2");
+   Assert.Equal("5", result);
+}
+[Fact]
+public void TestSubtractResultMinusOne()
+{
+   Calculations calculation = new();
+   string result = calculation.ProcessStatement("-", "3+2");
+   Assert.Equal("-1", result);
+}
 ```
-Данные методы проверяют работоспособности метода Subtract() (Вычитание).
+Данные методы проверяют работоспособность метода Subtract (Вычитание).
 
 Остальные методы тестирования сделаны по аналогии.
 
